@@ -257,7 +257,7 @@
 // =========================================================================
 // TEMPELKAN SECRET KEY DARI JSONBIN.IO DI DALAM TANDA PETIK DI BAWAH INI:
 // =========================================================================
-const JSONBIN_SECRET_KEY = "TEMPEL_SECRET_KEY_JSONBIN_DI_SINI"; 
+const JSONBIN_SECRET_KEY = "$2a$10$4lmODdxaLkBVIsNU0wHrCOllyrGpXGSvKuZO/.g5c/L8N01GR/88S"; 
 const ADMIN_PASS = "Fakinah_Word_Formation";
 
 // ADVANCED BANK DATA PARTS OF SPEECH (ASLI TIDAK DIUBAH)
@@ -367,7 +367,7 @@ async function fetchOnlineData() {
 
 async function saveOnlineData(dbData) {
     localStorage.setItem('wf_users_db_pos', JSON.stringify(dbData));
-    if(!JSONBIN_SECRET_KEY || JSONBIN_SECRET_KEY.includes("$2a$10$4lmODdxaLkBVIsNU0wHrCOllyrGpXGSvKuZO/.g5c/L8N01GR/88S")) return;
+    if(!JSONBIN_SECRET_KEY || JSONBIN_SECRET_KEY.includes("TEMPEL_SECRET_KEY")) return;
     try {
         await fetch("https://api.jsonbin.io/v3/b", {
             method: "POST",
